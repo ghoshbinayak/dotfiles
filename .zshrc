@@ -24,3 +24,12 @@ export GIT_PROXY_COMMAND=~/.torgit
 export PATH=$PATH:/home/binayak/projects/omnetpp-4.6/bin
 export LD_LIBRARY_PATH=/home/binayak/projects/omnetpp-4.6/lib:/usr/local/lib:$LD_LIBRARY_PATH
 
+# Decode base64
+decode64 () {
+  echo "$1" | base64 -d ; echo
+}
+
+# Encode base64
+encode64 () {
+    echo -n "$1" | base64; echo
+}  
